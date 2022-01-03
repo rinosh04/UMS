@@ -1,0 +1,24 @@
+{
+  "posts": [
+    {
+      "id": "1",
+      "name": "sssuuu",
+      "mail": "rrrr"
+    }
+  ],
+  "signup": [
+    {
+      "name": "rinosh",
+      "pwd": "rinosh",
+      "id": 1
+    },
+    {
+      "name": "110221110210",
+      "pwd": "1111111111",
+      "id": 2
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

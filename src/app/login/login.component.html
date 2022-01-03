@@ -1,0 +1,22 @@
+<div>
+    <mat-card>
+        <h1>User Management System</h1>
+        <h2>Login</h2>
+        <div>
+            <mat-form-field appearance="fill">
+                <mat-label>User Name</mat-label>
+                <input matInput [(ngModel)]="name">
+            </mat-form-field>
+        </div>
+        <div>
+            <mat-form-field appearance="fill">
+                <mat-label>Password</mat-label>
+                <input matInput type="password" [(ngModel)]="pwd">
+            </mat-form-field>
+        </div>
+        <div>
+            <button mat-raised-button (click)="login()">Login</button>
+        </div>
+        <a routerLink="/signup">New user? Click to signup!!</a>
+    </mat-card>
+</div>

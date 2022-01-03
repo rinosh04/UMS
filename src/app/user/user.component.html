@@ -1,0 +1,55 @@
+<h1>User Management System</h1>
+<div>
+    <button mat-raised-button (click)="isAddUser = !isAddUser;showUpdate = false;showAdd = true;">
+        Add User
+    </button>
+</div>
+<!-- Add User -->
+<div *ngIf="isAddUser">
+    <div>
+        <mat-form-field appearance="fill">
+            <mat-label>User Id</mat-label>
+            <input matInput [(ngModel)]="userId">
+        </mat-form-field>
+    </div>
+    <div>
+        <mat-form-field appearance="fill">
+            <mat-label>User Name</mat-label>
+            <input matInput [(ngModel)]="userName">
+        </mat-form-field>
+    </div>
+    <div>
+        <mat-form-field appearance="fill">
+            <mat-label>User Mail</mat-label>
+            <input matInput [(ngModel)]="userMail">
+        </mat-form-field>
+    </div>
+    <div>
+        <button mat-raised-button *ngIf="showAdd" (click)="addUser()">ADD</button>
+        <button mat-raised-button *ngIf="showUpdate" (click)="updateUser()">UPDATE</button>
+    </div>
+</div>
+<!-- Read User -->
+<div *ngIf="!isAddUser">
+    <table>
+        <thead>
+            <tr>
+                <th>User Id</th>
+                <th>User Name</th>
+                <th>User Mail</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let row of data">
+                <td>{{row.id}}</td>
+                <td>{{row.name}}</td>
+                <td>{{row.mail}}</td>
+                <td>
+                    <button (click)="editUser(row)">Edit</button>
+                    <button (click)="deleteUser(row)">Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
